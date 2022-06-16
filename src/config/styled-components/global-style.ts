@@ -10,4 +10,13 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${({ theme }) => theme.font.fontFamily};
     font-size: ${({ theme }) => theme.font.fontSize.normal};
   }
+
+  body {
+    background: ${({ theme }) => theme.colors.background.darkHeavy};
+    color: ${({ theme }) => theme.font.colors.white};
+  }
+
+  p {
+    margin: .4rem 0;
+  }
 `
