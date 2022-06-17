@@ -2,6 +2,7 @@ export const theme = {
   font: {
     fontFamily: "'Roboto', sans-serif",
     fontSize: {
+      large: '1.3rem',
       normal: '1rem',
       small: '.85rem',
       xsmall: '.78rem'

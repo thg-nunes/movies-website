@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    overflow-x: hidden;
     background: ${({ theme }) => theme.colors.background.darkHeavy};
     color: ${({ theme }) => theme.font.colors.white};
   }
