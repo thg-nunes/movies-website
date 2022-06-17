@@ -8,7 +8,9 @@ interface DataToComposiMoviestLists {
 }
 
 export const ComposiMoviestLists = ({ listMovies, descriptionList }:DataToComposiMoviestLists) => {
+  // const [lengthToList] = useState<number>(20 * 160)
   const [moveList, setMovieList] = useState<number>(0)
+  console.log(moveList)
 
   const previousMovie = () => {
     setMovieList(moveList - 160)
@@ -33,6 +35,9 @@ export const ComposiMoviestLists = ({ listMovies, descriptionList }:DataToCompos
           </div>
           ))}
         </HomeLisStyle>
+        {/* <Arrow isLeft onClick={() => nextMovie()}>
+        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" fill='#00D573'><path d="M24 40 21.9 37.85 34.25 25.5H8V22.5H34.25L21.9 10.15L24 8L40 24Z"/></svg>
+        </Arrow> */}
       </section>
     </ContainerHomeList>
   )
