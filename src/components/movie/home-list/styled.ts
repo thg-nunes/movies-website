@@ -15,4 +15,11 @@ export const MovieContainer = styled.div`
       theme.font.fontSize.small
     };
   }
+
+  section {
+    p {
+      color: #E88124;
+      font-size: ${({ theme }) => theme.font.fontSize.normal};
+    }
+  }
 `

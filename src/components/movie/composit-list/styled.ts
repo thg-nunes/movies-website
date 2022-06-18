@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const HomeLisStyle = styled.section`
   position: relative;
   display: flex;
+  transition: 250ms all ease-in-out;
 
   .movie {
     margin: 0 10px;
@@ -31,7 +32,7 @@ export const ContainerHomeList = styled.section`
   .listmovies {
     position: relative;
     overflow: hidden;
-    border: 1px solid;
+    height: 380px;
   }
 `
 
@@ -43,19 +44,26 @@ export const Arrow = styled.div<OtherProps>`
   right: ${(props): string => {
     if (props.isLeft) return '0'
   }};
+  border-left: ${(props): string => {
+    if (props.isLeft) return ' 1px solid rgba(241,250,238, .2)'
+  }};
+  width: 50%;
+  bottom: 0;
 
   position: absolute;
   z-index: 2;
-  height: 94.8%;
+  height: min-content;
   margin-top: .52rem;
 
   display: flex;
   align-items: center;
+  justify-content: center;
   background: rgba(32,32,32, .7);
 
   :hover {
     cursor: pointer;
-    background: rgba(32,32,32, .85);
+    background: rgba(32,32,32, 1);
+
     transition: .5ms all ease-in;
   }
 `
