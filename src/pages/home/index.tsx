@@ -1,12 +1,16 @@
 import React from 'react'
 import { Header } from '../../client/header'
-import { MostWatchedMovies } from '../../client/movies/popular'
+import { DramaMovies } from '../../client/movies/drama'
+import { ActionMovies } from '../../client/movies/action'
+import { AnimationMovies } from '../../client/movies/animation'
 
 export const HomePage = () => {
   return (
     <React.Fragment>
       <Header />
-      <MostWatchedMovies />
+      <ActionMovies />
+      <DramaMovies />
+      <AnimationMovies />
     </React.Fragment>
   )
 }
