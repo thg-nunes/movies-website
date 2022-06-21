@@ -4,6 +4,11 @@ export const MovieContainer = styled.div`
   width: 160px;
   max-width: 160px;
 
+  .link-movie-details{
+    text-decoration: none;
+    color: ${({ theme }) => theme.font.colors.white};
+  }
+
   img {
     width: 100%;
     max-width: 180px;
