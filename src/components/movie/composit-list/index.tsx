@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { MovieToHomeList } from '../home-list'
+import { MovieToHomeList } from '../container'
 import { Arrow, ContainerHomeList, HomeLisStyle } from './styled'
 
 interface DataToComposiMoviestLists {
