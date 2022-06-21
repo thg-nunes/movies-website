@@ -21,6 +21,11 @@ export const HomeLisStyle = styled.section`
 `
 
 export const ContainerHomeList = styled.section`
+  :first-child{
+    width: 95%;
+    margin: auto;
+  }
+
   margin-top: 1rem;
 
   .description-list {
