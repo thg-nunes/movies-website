@@ -1,9 +1,18 @@
 import { useState } from 'react'
+
 import { MovieToHomeList } from '../container'
 import { Arrow, ContainerHomeList, HomeLisStyle } from './styled'
 
+export interface MovieOriginalData {
+  title: string
+  release_date: Date
+  poster_path: string
+  vote_average:number
+  id?:number
+}
+
 interface DataToComposiMoviestLists {
-  listMovies: any[]
+  listMovies: MovieOriginalData[]
   descriptionList: string
 }
 
@@ -35,7 +44,13 @@ export const ComposiMoviestLists = ({ listMovies, descriptionList }:DataToCompos
         }}>
           {listMovies.map((movie, index) => (
             <div className='movie' key={index}>
-            <MovieToHomeList posterPath={movie.poster_path} title={movie.title} releaseDate={movie.release_date} voteAverage={movie.vote_average} />
+            <MovieToHomeList
+              posterPath={movie.poster_path}
+              title={movie.title}
+              releaseDate={movie.release_date}
+              voteAverage={movie.vote_average}
+              id={movie.id}
+            />
           </div>
           ))}
         </HomeLisStyle>

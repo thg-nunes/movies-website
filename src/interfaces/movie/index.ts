@@ -6,4 +6,5 @@ export interface MovieData {
   popularity?: number
   voteCount?: number
   overview?: string
+  id?:number
 }
