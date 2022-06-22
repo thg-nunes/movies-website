@@ -8,3 +8,17 @@ export interface MovieData {
   overview?: string
   id?:number
 }
+
+export interface MovieDataToDetailst {
+  title: string
+  release_date: Date
+  poster_path: string
+  vote_average:number
+  popularity?: number
+  vote_count?: number
+  overview?: string
+  genres?: [{
+    id: number
+    name: string
+  }]
+}
