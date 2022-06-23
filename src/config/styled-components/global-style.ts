@@ -17,6 +17,19 @@ export const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.font.colors.white};
   }
 
+   ::-webkit-scrollbar-track {
+    background-color: #2B2C2B;
+  }
+  ::-webkit-scrollbar {
+    width: 15px;
+    color: rebeccapurple;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    margin: 0 2px;
+    background: rgba(241, 250, 238, .4);
+  }
+
   p {
     margin: .4rem 0;
   }
