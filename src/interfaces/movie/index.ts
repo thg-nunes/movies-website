@@ -1,8 +1,8 @@
 export interface MovieData {
   title: string
-  releaseDate: Date
-  posterPath: string
-  voteAverage:number
+  release_date: Date
+  poster_path: string
+  vote_average:number
   popularity?: number
   voteCount?: number
   overview?: string

@@ -21,7 +21,7 @@ export const HomeLisStyle = styled.section`
 `
 
 export const ContainerHomeList = styled.section`
-  :first-child{
+   section {
     width: 95%;
     margin: auto;
   }
@@ -29,8 +29,8 @@ export const ContainerHomeList = styled.section`
   margin-top: 1rem;
 
   .description-list {
-    margin: 0;
-    margin-left: 1rem;
+    width: 95%;
+    margin: auto;
     font-size: ${({ theme }) => theme.font.fontSize.large};
   }
 

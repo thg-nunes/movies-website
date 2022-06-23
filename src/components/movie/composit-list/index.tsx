@@ -45,10 +45,10 @@ export const ComposiMoviestLists = ({ listMovies, descriptionList }:DataToCompos
           {listMovies.map((movie, index) => (
             <div className='movie' key={index}>
             <MovieToHomeList
-              posterPath={movie.poster_path}
+              poster_path={movie.poster_path}
               title={movie.title}
-              releaseDate={movie.release_date}
-              voteAverage={movie.vote_average}
+              release_date={movie.release_date}
+              vote_average={movie.vote_average}
               id={movie.id}
             />
           </div>
