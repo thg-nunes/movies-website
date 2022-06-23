@@ -19,20 +19,24 @@ interface GenresMovie {
 
 export const Header = () => {
   const [allGenres, setGenres] = useState<string[]>([])
+  const [genresId, setGenresId] = useState<number[]>([])
   const [menuIsVisible, setMenuIsVisivle] = useState(false)
 
   useEffect(() => {
     const genresMovie = async () => {
       const genres: string[] = []
+      const genresId: number[] = []
 
       const response = await axios.get(`${ENDPOINT_TMDB}/genre/movie/list?api_key=${API_KEY_AND_LANGUAGE}`)
       const { data }:AxiosResponse<GenresMovie> = response
 
       data.genres.forEach(genreData => {
         genres.push(genreData.name)
+        genresId.push(genreData.id)
       })
 
       setGenres(genres)
+      setGenresId(genresId)
     }
 
     genresMovie()
@@ -49,7 +53,11 @@ export const Header = () => {
       <Link to='/home'>
         <img src={MovieLogo} alt="" />
       </Link>
-      {allGenres.length && <ListOptions listOptions={allGenres} menuVisible={menuIsVisible} />}
+      {allGenres.length && <ListOptions
+        listOptions={allGenres}
+        menuVisible={menuIsVisible}
+        genresId={genresId}
+      />}
     </HeaderStyle>
   )
 }
