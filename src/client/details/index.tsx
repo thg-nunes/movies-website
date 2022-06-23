@@ -4,8 +4,8 @@ import { MovieDataToDetailst } from '../../interfaces/movie'
 import { MovieImageContainer } from '../../components/movie/details/image-container'
 import { OtherDetails } from '../../components/movie/details/other'
 import { SimilarMovies } from '../../components/movie/details/similar-movies'
+import { Header } from '../../components/header'
 import { Details } from './styled'
-import { Header } from '../header'
 
 interface DataMovie {
   dataMovie: MovieDataToDetailst

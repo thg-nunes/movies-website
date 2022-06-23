@@ -2,11 +2,13 @@ import { ListOptionsContainer } from './styled'
 
 interface TypeDataOptions {
   listOptions: string[]
+  menuVisible: boolean
 }
 
-export const ListOptions = ({ listOptions }:TypeDataOptions) => {
+export const ListOptions = ({ listOptions, menuVisible }:TypeDataOptions) => {
   return (
-    <ListOptionsContainer>
+    <ListOptionsContainer menuVisible={menuVisible}>
+      <span>Gêneros</span>
       {listOptions.map((option, index) => (
         <p key={index}>{option}</p>
       ))}
