@@ -3,6 +3,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom'
 
 import { HomePage } from './pages/home'
 import { MovieDetail } from './pages/movie/details'
+import { MoviesByGenre } from './pages/movie/byGenre'
 
 export default function App () {
   return (
@@ -11,6 +12,7 @@ export default function App () {
         <Route path='/' element={<Navigate to='/home' />} />
         <Route path='/home' element={<HomePage />} />
         <Route path='/movie/:id/details' element={<MovieDetail />} />
+        <Route path='/movie/genre/:id' element={<MoviesByGenre />} />
         <Route path='*' element={<Navigate to='/'/>} />
       </Routes>
     </BrowserRouter>
