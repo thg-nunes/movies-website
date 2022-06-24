@@ -14,10 +14,9 @@ export const ListOptions = ({ listOptions, menuVisible, genresId }:TypeDataOptio
     <ListOptionsContainer menuVisible={menuVisible}>
       <span>Gêneros</span>
       {listOptions.map((option, index) => (
-        <a className='link-genre-movie' key={index} href={`/movie/genre/${genresId[index]}`} onClick={(e) => {
-          e.preventDefault()
+        <p className='link-genre-movie' key={index} onClick={() => {
           navigate(`/movie/genre/${genresId[index]}`, { state: option })
-        }}>{option}</a>
+        }} >{option}</p>
       ))}
     </ListOptionsContainer>
   )
