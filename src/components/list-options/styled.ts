@@ -35,11 +35,13 @@ export const ListOptionsContainer = styled.section<ListOptionsContainerProps>`
     border-bottom: 1px solid;
   }
 
-  p {
+  .link-genre-movie {
     width: 100%;
     text-align: center;
     padding: 1rem .4rem;
     cursor: pointer;
+    text-decoration: none;
+    color: ${({ theme }) => theme.font.colors.white};
 
     :hover {
       text-decoration: underline;
