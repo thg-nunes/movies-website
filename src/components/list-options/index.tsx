@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { ListOptionsContainer } from './styled'
 
 interface TypeDataOptions {
@@ -12,9 +11,7 @@ export const ListOptions = ({ listOptions, menuVisible, genresId }:TypeDataOptio
     <ListOptionsContainer menuVisible={menuVisible}>
       <span>Gêneros</span>
       {listOptions.map((option, index) => (
-        <Link className='link-genre-movie' key={index} to={`/movie/genre/${genresId[index]}`}>
-          <p>{option}</p>
-        </Link>
+        <a className='link-genre-movie' key={index} href={`/movie/genre/${genresId[index]}`}>{option}</a>
       ))}
     </ListOptionsContainer>
   )
