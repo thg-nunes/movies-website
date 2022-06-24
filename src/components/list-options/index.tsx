@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router'
 import { Link } from 'react-router-dom'
 import { ListOptionsContainer } from './styled'
 
@@ -9,14 +8,13 @@ interface TypeDataOptions {
 }
 
 export const ListOptions = ({ listOptions, menuVisible, genresId }:TypeDataOptions) => {
-  const navigate = useNavigate()
   return (
     <ListOptionsContainer menuVisible={menuVisible}>
       <span>Gêneros</span>
       {listOptions.map((option, index) => (
-        <p className='link-genre-movie' key={index} onClick={() => {
-          navigate(`/movie/genre/${genresId[index]}`, { state: option })
-        }} >{option}</p>
+        <Link className='link-genre-movie' key={index} to={`/movie/genre/${genresId[index]}`} state={option}>
+          {option}
+        </Link>
       ))}
     </ListOptionsContainer>
   )
