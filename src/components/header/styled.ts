@@ -23,4 +23,10 @@ export const HeaderStyle = styled.div`
   .menu-icon {
     cursor: pointer;
   }
+
+@media (max-width: 730px) {
+  img {
+    width: 30px;
+  }
+}
 `

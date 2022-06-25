@@ -34,4 +34,15 @@ export const SearchContainer = styled.section`
     margin: 0;
     cursor: pointer;
   }
+
+@media (max-width: 730px) {
+  height: 28px;
+  max-height: 28px;
+
+  input {
+    ::placeholder {
+      font-size: .7rem;
+    }
+  }
+}
 `
