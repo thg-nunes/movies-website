@@ -27,4 +27,19 @@ export const MovieContainer = styled.div`
       font-size: ${({ theme }) => theme.font.fontSize.normal};
     }
   }
+
+@media (max-width: 730px) {
+  p {
+    font-size: ${({ theme }) =>
+      theme.font.fontSize.xsmall
+    };
+  }
+
+  section {
+    p {
+      color: #E88124;
+      font-size: ${({ theme }) => theme.font.fontSize.small};
+    }
+  }
+}
 `

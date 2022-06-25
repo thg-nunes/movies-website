@@ -39,6 +39,10 @@ export const SearchContainer = styled.section`
   height: 28px;
   max-height: 28px;
 
+  img {
+    width: 25px;
+  }
+
   input {
     ::placeholder {
       font-size: .7rem;

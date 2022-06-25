@@ -39,6 +39,12 @@ export const ContainerHomeList = styled.section`
     overflow: hidden;
     height: 380px;
   }
+
+@media (max-width: 730px) {
+  .description-list {
+    font-size: ${({ theme }) => theme.font.fontSize.normal};
+  }
+}
 `
 
 interface OtherProps {
