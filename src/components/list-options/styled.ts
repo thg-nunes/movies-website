@@ -62,7 +62,19 @@ export const ListOptionsContainer = styled.section<ListOptionsContainerProps>`
       background: rgba(241, 250, 238, .4);
   }
 
-  @keyframes listTransition {
+@media (max-width: 730px) {
+  width: 180px;
+  left: ${({ menuVisible }): string => {
+    if (menuVisible) return '0'
+    return '-180px'
+  }};
 
+  span:first-child {
+    font-size: ${({ theme }) => theme.font.fontSize.normal};
   }
+
+  .link-genre-movie {
+    font-size: ${({ theme }) => theme.font.fontSize.small};
+  }
+}
 `
