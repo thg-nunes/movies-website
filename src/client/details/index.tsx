@@ -6,6 +6,7 @@ import { OtherDetails } from '../../components/movie/details/other'
 import { SimilarMovies } from '../../components/movie/details/similar-movies'
 import { Header } from '../../components/header'
 import { Details } from './styled'
+import { Footer } from '../../components/footer'
 
 interface DataMovie {
   dataMovie: MovieDataToDetailst
@@ -32,5 +33,6 @@ export const DetailsMovie = ({ dataMovie }:DataMovie) => {
     />
 
     {id !== undefined && <SimilarMovies id={Number(id)} />}
+    <Footer />
   </Details>
 }
