@@ -16,21 +16,25 @@ interface OtherDetailsProps {
 export const OtherDetails = ({ release_date, vote_average, popularity, vote_count, genres }: OtherDetailsProps) => {
   return (
     <OtherDetailsStyled>
-      <span>{`Lançamento: ${release_date}`}</span>
-      <span>
-        Classificação: {vote_average} | Votos: {vote_count}
-      </span>
-      <span>
-        Assistido:
-          <Eye
-            className='icon'
-            size={24}
-          />
-          {`${popularity.toLocaleString('pt-BR', { notation: 'compact' })} vezes `}
-      </span>
-      <span>Gêneros: {genres.map((genre, index) => {
-        return `${genre.name}${index === genres.length - 1 ? '' : ', '}`
-      })}</span>
+      <div>
+        <span>{`Lançamento: ${release_date}`}</span>
+        <span>
+          Classificação: {vote_average} | Votos: {vote_count}
+        </span>
+      </div>
+      <div>
+        <span>
+          Assistido:
+            <Eye
+              className='icon'
+              size={window.innerWidth <= 868 ? 16 : 24}
+            />
+            {`${popularity.toLocaleString('pt-BR', { notation: 'compact' })} vezes `}
+        </span>
+        <span>Gêneros: {genres.map((genre, index) => {
+          return `${genre.name}${index === genres.length - 1 ? '' : ', '}`
+        })}</span>
+      </div>
     </OtherDetailsStyled>
   )
 }

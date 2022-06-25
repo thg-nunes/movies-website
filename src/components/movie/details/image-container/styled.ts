@@ -34,4 +34,14 @@ export const DataToImageContainer = styled.div`
   h2 {
     font-size: 2rem;
   }
+
+@media (max-width: 730px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  span {
+    font-size: ${({ theme }) => theme.font.fontSize.small};
+  }
+}
 `
