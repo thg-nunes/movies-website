@@ -39,7 +39,7 @@ export const MoviesByGenre = () => {
       <React.Fragment>
         <SkipBackStyled onClick={() => window.history.back()}>
           <section className='skip-page'>
-            <SkipBack size={28}
+            <SkipBack size={window.innerWidth <= 730 ? 22 : 28}
               color='#00D573'
               weight='fill'
             />

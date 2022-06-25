@@ -27,4 +27,14 @@ export const SkipBackStyled = styled.div`
       transition: 450ms;
     }
   }
+
+@media (max-width: 730px) {
+  .skip-page {
+    width: 88px;
+  }
+
+  span {
+    font-size:  ${({ theme }) => theme.font.fontSize.small}
+  }
+}
 `
