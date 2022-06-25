@@ -48,4 +48,45 @@ export const FooterStyled = styled.footer`
       margin-left: .25rem;
     }
   }
+
+@media (max-width: 730px) {
+  p {
+    font-size: .95rem ;
+  }
+
+  .linkadin {
+    width: 100%;
+
+    a {
+      margin: .25rem;
+      margin-right: 0;
+    }
+
+    img {
+      width: 1.5rem;
+    }
+
+  }
+
+  .stacks {
+    width: 100%;
+    flex-direction: column;
+
+    div {
+      display: flex;
+      justify-content: center;
+      margin: .5rem 0;
+
+      p {
+        font-size: ${({ theme }) => theme.font.fontSize.small};
+      }
+
+      img {
+        width: 1.5rem;
+        margin-left: 0;
+        margin-right: .25rem;
+      }
+    }
+  }
+}
 `
