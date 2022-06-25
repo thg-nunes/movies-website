@@ -2,6 +2,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import { DetailsMovie } from '../../../client/details'
+import { Loading } from '../../../components/loading'
 
 import { API_KEY_AND_LANGUAGE, ENDPOINT_TMDB } from '../../../config/endpoints-tmdb'
 
@@ -19,8 +20,8 @@ export const MovieDetail = () => {
   }, [id])
 
   return (
-    datailsMovie !== null && <DetailsMovie
-    dataMovie={datailsMovie}
-    />
+    (datailsMovie !== null)
+      ? <DetailsMovie dataMovie={datailsMovie} />
+      : <Loading />
   )
 }

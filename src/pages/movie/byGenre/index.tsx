@@ -2,6 +2,8 @@ import axios, { AxiosResponse } from 'axios'
 import { SkipBack } from 'phosphor-react'
 import React, { useEffect, useState } from 'react'
 import { useLocation, useParams } from 'react-router'
+import { Footer } from '../../../components/footer'
+import { Loading } from '../../../components/loading'
 import { ComposiMoviestLists } from '../../../components/movie/composit-list'
 
 import { API_KEY_AND_LANGUAGE, ENDPOINT_TMDB } from '../../../config/endpoints-tmdb'
@@ -32,7 +34,8 @@ export const MoviesByGenre = () => {
   }, [id])
 
   return (
-    (firstList && secondList) !== null && (
+    (firstList && secondList) !== null
+      ? (
       <React.Fragment>
         <SkipBackStyled onClick={() => window.history.back()}>
           <section className='skip-page'>
@@ -45,7 +48,9 @@ export const MoviesByGenre = () => {
         </SkipBackStyled>
         <ComposiMoviestLists descriptionList={String(state)} listMovies={firstList} />
         <ComposiMoviestLists descriptionList={String(state)} listMovies={secondList} />
+        <Footer />
       </React.Fragment>
-    )
+        )
+      : <Loading />
   )
 }
